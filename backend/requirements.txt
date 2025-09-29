@@ -1,0 +1,45 @@
+# Core Django packages
+Django>=4.2,<5.0
+djangorestframework>=3.14,<4.0
+django-cors-headers>=4.3,<5.0
+django-environ>=0.11,<1.0
+
+# Database
+psycopg2-binary>=2.9,<3.0
+
+# Task queue
+celery>=5.3,<6.0
+redis>=5.0,<6.0
+
+# File storage
+boto3>=1.34,<2.0
+django-storages>=1.14,<2.0
+
+# Authentication
+djangorestframework-simplejwt>=5.3,<6.0
+
+# File processing
+python-docx>=0.8,<1.0
+PyPDF2>=3.0,<4.0
+reportlab>=4.0,<5.0
+
+# Arabic text processing
+python-bidi>=0.4,<1.0
+arabic-reshaper>=3.0,<4.0
+
+# Image processing
+Pillow>=10.1,<11.0
+
+# API documentation
+drf-spectacular>=0.26,<1.0
+
+# Testing
+pytest>=7.4,<8.0
+pytest-django>=4.7,<5.0
+
+# Code quality
+black>=23.11,<24.0
+
+# Production
+gunicorn>=21.2,<22.0
+whitenoise>=6.6,<7.0

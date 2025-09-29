@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Arabic and RTL support */
+@layer base {
+  html[dir="rtl"] {
+    direction: rtl;
+  }
+  
+  html[dir="ltr"] {
+    direction: ltr;
+  }
+
+  .font-arabic {
+    font-family: 'Amiri', 'Noto Naskh Arabic', serif;
+  }
+
+  .font-english {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  /* Arabic text improvements */
+  .text-arabic {
+    line-height: 1.8;
+    word-spacing: 0.1em;
+  }
+
+  /* Document preview styles */
+  .document-preview {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+  }
+
+  /* Responsive design utilities */
+  .container-responsive {
+    @apply mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary-100 hover:bg-secondary-200 text-secondary-700 font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+
+  .input-base {
+    @apply w-full px-3 py-2 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-sm border border-secondary-200 p-6;
+  }
+
+  /* Wizard steps */
+  .wizard-step {
+    @apply flex items-center space-x-4 p-4 rounded-lg border-2 transition-all duration-200;
+  }
+
+  .wizard-step.active {
+    @apply border-primary-500 bg-primary-50;
+  }
+
+  .wizard-step.completed {
+    @apply border-green-500 bg-green-50;
+  }
+
+  .wizard-step.inactive {
+    @apply border-secondary-200 bg-white;
+  }
+}
+
+/* Loading animations */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* File upload area */
+.upload-area {
+  transition: all 0.2s ease-in-out;
+}
+
+.upload-area.dragover {
+  @apply border-primary-500 bg-primary-50;
+}
+
+/* Arabic text direction utilities */
+.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+.ltr {
+  direction: ltr;
+  text-align: left;
+}
